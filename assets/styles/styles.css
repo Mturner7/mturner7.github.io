@@ -4,6 +4,17 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
+:root {
+    --main-bgcolor: #fff;
+    --sec-bgcolor: #68EDCB;
+    --menu-primary: #1B2CC1;
+    --menu-secondary: #ABD2FA;
+}
+
+li {
+    list-style-type: none;
+}
+
 a {
     text-decoration: none;
     color: unset;
@@ -15,7 +26,7 @@ a {
     position: sticky;
     align-items: center;
     justify-content: space-around;
-    background-color: #00B2FF;
+    background-color: var(--menu-primary);
 }
 
 .page-header li {
@@ -26,13 +37,13 @@ a {
 }
 
 .page-header, .page-header a {
-    color: #fff;
+    color: var(--main-bgcolor);
     text-decoration: none;
 }
 
 .page-header li a:hover {
-    border-top: 2px solid #fff;
-    border-bottom: 2px solid #fff;
+    border-top: 2px solid var(--main-bgcolor);
+    border-bottom: 2px solid var(--main-bgcolor);
 }
 
 .container {
@@ -42,6 +53,24 @@ a {
     justify-content: center;
 }
 
+
+#index-navbar {
+    display: flex;
+    width: 10%;
+    height: 100%;
+    position: fixed;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--menu-secondary);
+}
+
+#index-navbar {
+    display: block;
+}
+
+
+
 .project-item {
     border-radius: 8px;
     position: relative;
@@ -49,7 +78,7 @@ a {
     width: 250px;
     margin: 1.5rem;
     box-shadow: 0 4px 8px 0 rgba(80, 79, 79, 0.2);
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 .project-item:hover {
@@ -58,14 +87,12 @@ a {
 }
 
 .project-item a {
-    background-color: #68EDCB;
+    background-color: var(--sec-bgcolor);
 }
 
 .project-info {
     padding: 0.8rem;
 }
-
-
 
 footer {
     color: rgb(75, 74, 74);
